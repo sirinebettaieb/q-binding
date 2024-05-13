@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 interface User {
   name: string,
   firstName: string,
@@ -11,7 +12,8 @@ interface User {
 @Component({
   selector: 'app-user-profile',
   standalone: true,
-  imports: [],
+  imports: [FormsModule],
+  
   templateUrl: './user-profile.component.html',
   styleUrl: './user-profile.component.scss'
 })
