@@ -1,8 +1,12 @@
-<article>
-    <div class="pictureContainer">
-    <img [src]="photo" alt=""/>
-    </div>
-    <div >name:</div>
-    <div> last name :</div>
-    <div> age : </div>
-</article>
+<figure>
+    <img [src]="user.photo" [alt]="user.firstName + ' ' + user.name"/>
+    <figcaption>
+        <h2>Prénom : {{user.firstName}}</h2>
+        <h2>Nom : {{user.name}}</h2>
+        <h3 [hidden]="user.isHidden">Age : {{user.age}}</h3>
+        <p>"{{user.quote}}"</p>
+    </figcaption>
+</figure>
+<button (click)="sayHello()">Dire bonjour</button>
+<button (click)="toggleHidden()">{{user.isHidden ? "Montrer" : "Cacher"}} l'age</button>
+<input type="text" [(ngModel)]="user.quote"/>
