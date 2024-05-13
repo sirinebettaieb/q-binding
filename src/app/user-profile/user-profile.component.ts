@@ -13,7 +13,6 @@ interface User {
   selector: 'app-user-profile',
   standalone: true,
   imports: [FormsModule],
-  
   templateUrl: './user-profile.component.html',
   styleUrl: './user-profile.component.scss'
 })
